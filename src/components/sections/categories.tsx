@@ -191,6 +191,7 @@ export function Categories() {
                          bg-white/5 px-4 py-2 text-sm font-medium text-white/60"
             >
               <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+              
               {label}
             </span>
           ))}
