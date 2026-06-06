@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ---- OSR brand palette (HSL channels) ---- */
+    --osr-orange: 38 95% 59%;        /* #F9B233  primary */
+    --osr-orange-deep: 33 92% 46%;   /* darker hover state */
+    --osr-orange-soft: 38 100% 92%;  /* soft tint surfaces */
+    --osr-red: 351 85% 42%;          /* fire-engine red accent */
+    --osr-red-deep: 351 80% 33%;
+    --osr-ink: 24 30% 8%;            /* warm near-black text */
+    --osr-cream: 40 60% 98%;         /* warm off-white canvas */
+    --osr-cream-2: 38 70% 95%;
+
+    /* ---- semantic tokens (light theme) ---- */
+    --background: 40 60% 98%;
+    --foreground: 24 30% 8%;
+    --card: 0 0% 100%;
+    --muted: 38 30% 94%;
+    --muted-foreground: 24 12% 38%;
+    --border: 30 25% 88%;
+    --ring: 38 95% 59%;
+    --primary: 351 85% 42%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "cv01";
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Logical-property utilities keep RTL/LTR symmetric automatically. */
+  [dir="rtl"] .flip-x { transform: scaleX(-1); }
+
+  ::selection {
+    background: hsl(var(--osr-orange) / 0.35);
+    color: hsl(var(--osr-ink));
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--osr-red));
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Hand-drawn food-icon pattern lifted from the brand identity — used as a
+     subtle, premium texture rather than wallpaper. */
+  .osr-pattern {
+    background-image: url("/pattern.svg");
+    background-size: 220px;
+    background-repeat: repeat;
+  }
+
+  .osr-eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-osr-orange/30
+           bg-osr-orange/10 px-3.5 py-1.5 text-xs font-semibold uppercase
+           tracking-[0.18em] text-osr-orange-deep;
+  }
+
+  .osr-headline {
+    @apply font-display font-bold tracking-[-0.02em] text-balance;
+  }
+
+  /* Reusable gradient text for accent words. */
+  .text-gradient {
+    background: linear-gradient(100deg, hsl(var(--osr-red)) 0%, hsl(var(--osr-orange-deep)) 60%, hsl(var(--osr-orange)) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+
+  /* ---- 3D decorative shapes (brand orbs, tilted ring, cube) ---- */
+  .osr-orb {
+    border-radius: 9999px;
+    position: absolute;
+    will-change: transform;
+  }
+  .osr-orb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.9), transparent 42%);
+  }
+  .osr-orb-orange {
+    background: radial-gradient(circle at 34% 30%, #ffd27a, hsl(var(--osr-orange)) 46%, #d6850a 100%);
+    box-shadow: 0 30px 60px -18px rgba(214, 133, 10, 0.55), inset -8px -10px 22px rgba(120, 60, 0, 0.32);
+  }
+  .osr-orb-red {
+    background: radial-gradient(circle at 34% 30%, #ff8b9e, hsl(var(--osr-red)) 50%, #7c0a1d 100%);
+    box-shadow: 0 26px 50px -16px rgba(124, 10, 29, 0.55), inset -6px -8px 18px rgba(60, 0, 8, 0.4);
+  }
+  .osr-ring3d {
+    position: absolute;
+    border-radius: 9999px;
+    border: 22px solid transparent;
+    background:
+      linear-gradient(#fbe9c8, #fbe9c8) padding-box,
+      conic-gradient(from 200deg, hsl(var(--osr-orange)), hsl(var(--osr-red)), hsl(var(--osr-orange))) border-box;
+    transform: rotateX(62deg) rotateZ(8deg);
+    box-shadow: 0 30px 50px -20px rgba(180, 90, 10, 0.45);
+  }
+  .osr-device {
+    position: relative;
+    z-index: 3;
+    border: 11px solid #14110d;
+    border-radius: 42px;
+    background: #14110d;
+    box-shadow: 0 40px 80px -30px rgba(70, 35, 5, 0.55), 0 0 0 1px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+  .osr-device > img { display: block; width: 100%; height: auto; border-radius: 31px; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .animate-float-slow { animation: float 9s ease-in-out infinite; }
+    .animate-spin-3d { animation: spin3d 18s linear infinite; }
+  }
+}
+
+@keyframes spin3d {
+  to { transform: rotateX(62deg) rotateZ(368deg); }
+}
+
+/* ---- Category emoji 3D float (used in categories section) ---- */
+.osr-category-emoji {
+  display: inline-block;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.55)) drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .osr-category-emoji {
+    animation: emojiFloat 7s ease-in-out infinite;
+  }
+}
+@keyframes emojiFloat {
+  0%,100% { transform: translateY(0) rotateY(0deg) scale(1); }
+  35%      { transform: translateY(-8px) rotateY(6deg) scale(1.04); }
+  65%      { transform: translateY(-5px) rotateY(-4deg) scale(1.02); }
+}

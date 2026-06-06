@@ -1,0 +1,344 @@
+{
+  "meta": {
+    "title": "OSR — Productive Families Platform | Food, Crafts & Products",
+    "titleTemplate": "%s · OSR",
+    "description": "OSR connects productive families with customers everywhere — homemade food & sweets, handcrafted items, and unique products. Ready-made, custom orders, or special occasions.",
+    "keywords": "productive families, homemade food, handcrafts, home products, OSR, marketplace, Saudi Arabia, delivery"
+  },
+  "nav": {
+    "categories": "Categories",
+    "ecosystem": "Ecosystem",
+    "features": "Features",
+    "products": "Apps",
+    "howItWorks": "How it works",
+    "download": "Download",
+    "contact": "Contact",
+    "cta": "Join as a family",
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Switch language"
+  },
+  "hero": {
+    "eyebrow": "Productive Families Platform",
+    "title": "Your craft deserves <hl>to be seen</hl>",
+    "highlight": "to be seen",
+    "subtitle": "OSR is a platform built with heart for productive families — homemade food & sweets, handcrafted items made with love, and unique products. Sell ready-made, on-demand, or for special occasions.",
+    "primaryCta": "Explore categories",
+    "secondaryCta": "Start selling now",
+    "trust": "Trusted by thousands of productive families across the region",
+    "stats": {
+      "orders": "Orders delivered",
+      "providers": "Active family sellers",
+      "uptime": "Platform uptime"
+    },
+    "chip1": "Fast & safe delivery",
+    "chip2": "Authentic homemade products"
+  },
+  "about": {
+    "eyebrow": "The OSR Story",
+    "title": "Behind every product — a family hand full of love",
+    "body": "OSR was born from a deep belief that the creativity of productive families deserves a platform worthy of it — one that showcases authentic homemade cooking, carefully crafted handmade items, and exceptional products. We are here to make the selling journey simple, beautiful, and profitable for every family that pours their heart into their work.",
+    "points": [
+      {
+        "title": "Made with heart",
+        "body": "Every product has a family behind it who invested their time, love, and expertise."
+      },
+      {
+        "title": "Wider reach",
+        "body": "Showcase your products to thousands of customers in your city and beyond."
+      },
+      {
+        "title": "Real income",
+        "body": "Turn your everyday creativity into a sustainable, steady source of income."
+      }
+    ]
+  },
+  "categories": {
+    "eyebrow": "Platform Categories",
+    "title": "Three categories. No limits to creativity.",
+    "subtitle": "From warm homemade food to exceptional handcrafts — OSR puts your creativity on the world stage.",
+    "readyBadge": "Ready",
+    "customBadge": "Custom",
+    "occasionBadge": "Occasions",
+    "items": [
+      {
+        "id": "food",
+        "title": "Food & Sweets",
+        "subtitle": "Authentic flavour, from a home kitchen",
+        "description": "Warm homemade meals, oriental and western sweets, pastries, grills — everything our mothers cooked with love.",
+        "subcategories": [
+          { "title": "Ready meals" },
+          { "title": "Made to order" },
+          { "title": "Occasion catering" }
+        ],
+        "cta": "Browse food & sweets"
+      },
+      {
+        "id": "crafts",
+        "title": "Crafts & Handwork",
+        "subtitle": "Made by hand, filled with taste",
+        "description": "Embroidery, knitting, painting, handmade décor, custom gifts — every piece tells a story worth telling.",
+        "subcategories": [
+          { "title": "Ready pieces" },
+          { "title": "Custom designs" },
+          { "title": "Occasion gifts" }
+        ],
+        "cta": "Browse handcrafts"
+      },
+      {
+        "id": "products",
+        "title": "Products",
+        "subtitle": "Home quality, guaranteed trust",
+        "description": "Natural perfumes and cosmetics, honey and herbs, homemade food ingredients, and unique home products.",
+        "subcategories": [
+          { "title": "Ready products" },
+          { "title": "Made to order" },
+          { "title": "Occasion bundles" }
+        ],
+        "cta": "Browse products"
+      }
+    ]
+  },
+  "ecosystem": {
+    "eyebrow": "The Ecosystem",
+    "title": "Four roles. One destination.",
+    "subtitle": "The platform that brings productive families together with customers seeking the authentic.",
+    "nodes": [
+      {
+        "title": "Productive Families",
+        "body": "Create your store, add your products, and receive orders with ease — all from home."
+      },
+      {
+        "title": "Customers",
+        "body": "Discover authentic homemade products, order, pay, and track your delivery with confidence."
+      },
+      {
+        "title": "Delivery Agents",
+        "body": "Receive delivery tasks, navigate smart routes, and complete handoffs efficiently and professionally."
+      },
+      {
+        "title": "Operations",
+        "body": "Central control over stores, orders, and overall platform performance with full visibility."
+      }
+    ],
+    "coreLabel": "OSR Core"
+  },
+  "features": {
+    "eyebrow": "Platform Features",
+    "title": "Everything a productive family needs",
+    "subtitle": "Tools designed to make the selling experience simple, profitable, and delightful from day one.",
+    "items": [
+      {
+        "title": "Professional store in minutes",
+        "body": "Build your storefront with product photos, prices, and delivery times in simple steps — no tech skills needed."
+      },
+      {
+        "title": "Instant order notifications",
+        "body": "Every order reaches you the moment it's placed, with full customer details and required delivery time."
+      },
+      {
+        "title": "Fast & secure payments",
+        "body": "Trusted local payment options for customers, with regular, guaranteed transfers of your earnings."
+      },
+      {
+        "title": "Occasion management",
+        "body": "Accept advance orders for holidays, celebrations, and special occasions with flexibility and ease."
+      },
+      {
+        "title": "Organised delivery",
+        "body": "An available network of agents to deliver your products to customers on time — worry-free."
+      },
+      {
+        "title": "Analytics & insights",
+        "body": "Track your sales, store performance, and customer preferences to grow your business every day."
+      }
+    ]
+  },
+  "products": {
+    "eyebrow": "Platform Apps",
+    "title": "An app for every role in the ecosystem",
+    "subtitle": "Purpose-built applications sharing one intelligent core — for a seamless experience end to end.",
+    "audience": {
+      "customer": "Customers",
+      "provider": "Family Sellers",
+      "representative": "Delivery Agents",
+      "operations": "Operations"
+    }
+  },
+  "download": {
+    "eyebrow": "Get the apps",
+    "title": "Start your journey with OSR",
+    "subtitle": "Available on the App Store and Google Play — choose the app that fits your role in the ecosystem.",
+    "appStore": "Download on the App Store",
+    "googlePlay": "Get it on Google Play",
+    "comingSoon": "Coming soon",
+    "ratingLabel": "rating",
+    "partnerTitle": "Are you a delivery company?",
+    "partnerSubtitle": "Join the OSR partner network and start delivering with us"
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "title": "From the kitchen to the doorstep in four steps",
+    "subtitle": "A simple, seamless journey connecting the productive family with the customer — no complexity.",
+    "steps": [
+      {
+        "title": "Create your store",
+        "body": "Register as a productive family, add your products with photos and prices, and go live."
+      },
+      {
+        "title": "Receive the order",
+        "body": "Get an instant notification for every new order with full details and the required delivery time."
+      },
+      {
+        "title": "Prepare & dispatch",
+        "body": "Prepare the order and assign it to a delivery agent with a single tap — no manual follow-up."
+      },
+      {
+        "title": "Delivery & rating",
+        "body": "The product reaches the customer fresh and with care — they complete their experience with a review that builds your reputation."
+      }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why OSR",
+    "title": "Because your craft deserves more than WhatsApp",
+    "items": [
+      {
+        "title": "Your digital identity",
+        "body": "Your own store sets you apart and builds customer trust in your products professionally."
+      },
+      {
+        "title": "Organised orders",
+        "body": "Goodbye chaos — every order with its details, timing, and status in one place."
+      },
+      {
+        "title": "Reliable delivery",
+        "body": "An available network of agents delivers your products with professionalism, speed, and safety."
+      },
+      {
+        "title": "Real growth",
+        "body": "Analytics that help you understand what your customers love and expand your business day by day."
+      }
+    ]
+  },
+  "stats": {
+    "eyebrow": "By the numbers",
+    "title": "A platform that grows with productive families",
+    "items": [
+      {
+        "value": "10K+",
+        "label": "Registered family sellers"
+      },
+      {
+        "value": "500K+",
+        "label": "Orders delivered"
+      },
+      {
+        "value": "4.9★",
+        "label": "Average product rating"
+      },
+      {
+        "value": "30+",
+        "label": "Cities covered for delivery"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Success stories",
+    "title": "Families that spoke before us",
+    "items": [
+      {
+        "quote": "I used to sell on WhatsApp and it was chaos. After OSR I had a proper store and started getting orders I never imagined!",
+        "name": "Um Ahmad",
+        "role": "Food & Sweets — Riyadh"
+      },
+      {
+        "quote": "My handmade crafts reached people I never imagined would know about me. OSR changed my life.",
+        "name": "Noura Al-Otaibi",
+        "role": "Handcrafts — Jeddah"
+      },
+      {
+        "quote": "The agent delivered the order and I didn't have to leave home. Simple, comfortable, and every bit trustworthy.",
+        "name": "Hind Al-Shammari",
+        "role": "Natural Products — Dammam"
+      }
+    ]
+  },
+  "partners": {
+    "eyebrow": "Our partners",
+    "title": "Powering productive families in every city"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions, answered",
+    "items": [
+      {
+        "q": "Can any productive family register?",
+        "a": "Yes! Any family that produces food, handcrafts, or home products can register and create their store in minutes."
+      },
+      {
+        "q": "What categories are available on the platform?",
+        "a": "Three main categories: Food & Sweets, Crafts & Handwork, and Products. Within each category you can sell ready-made, on-demand, or for special occasions."
+      },
+      {
+        "q": "How does the product reach the customer?",
+        "a": "Through OSR's network of available delivery agents in your city, or you can set a direct pickup option if you prefer."
+      },
+      {
+        "q": "When do I receive my earnings?",
+        "a": "Earnings are transferred regularly and systematically directly to your bank account."
+      },
+      {
+        "q": "Is the platform secure for payments?",
+        "a": "Yes, all payment operations are fully secured with trusted and certified local payment options."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Register your productive family today",
+    "subtitle": "Whether you're a family looking to sell, a customer seeking authentic products, or a partner in the ecosystem — we'd love to welcome you.",
+    "name": "Full name",
+    "email": "Email address",
+    "company": "Store or project name",
+    "interest": "I'm interested as a",
+    "interestOptions": {
+      "customer": "Customer looking for products",
+      "provider": "Family seller wanting to sell",
+      "enterprise": "Partner or investor"
+    },
+    "message": "Message",
+    "submit": "Get started now",
+    "infoTitle": "Other ways to reach us"
+  },
+  "footer": {
+    "tagline": "Putting productive families' creativity on the world stage.",
+    "product": "Platform",
+    "company": "Company",
+    "legal": "Legal",
+    "links": {
+      "categories": "Categories",
+      "ecosystem": "Ecosystem",
+      "features": "Features",
+      "products": "Apps",
+      "download": "Download",
+      "about": "About OSR",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "rights": "All rights reserved.",
+    "language": "Language"
+  },
+  "screenshots": {
+    "eyebrow": "Inside the app",
+    "title": "An experience crafted with care and love",
+    "subtitle": "See how the customer journey looks — from browsing a product to receiving it at their doorstep.",
+    "captions": {
+      "login": "Sign in",
+      "browse": "Browse products",
+      "detail": "Order details"
+    }
+  }
+}
