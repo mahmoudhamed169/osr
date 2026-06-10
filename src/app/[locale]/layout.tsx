@@ -8,6 +8,7 @@ import { siteConfig } from "@/config/site";
 import { plexSans, plexArabic } from "../fonts";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { ConsultationModal } from "@/components/ui/consultation-modal";
 import { cn } from "@/lib/utils";
 
 // Pre-render every locale at build time for fully static delivery.
@@ -97,6 +98,7 @@ export default async function LocaleLayout({
           <Header />
           <main id="main">{children}</main>
           <Footer />
+          <ConsultationModal />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -2,9 +2,10 @@ import { useLocale, useTranslations } from "next-intl";
 import { Section } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
 import { AppStoreButtons } from "@/components/ui/app-badges";
+import { DeliveryPartnerModal } from "@/components/ui/delivery-partner-modal";
 import { apps } from "@/config/apps";
 import type { Locale } from "@/i18n/routing";
-import { Star, Bike, ArrowUpRight } from "lucide-react";
+import { Star } from "lucide-react";
 
 export function Download() {
   const t = useTranslations("download");
@@ -60,35 +61,7 @@ export function Download() {
 
           {/* Partner card — شركات التوصيل */}
           <Reveal className="mx-auto mt-4 max-w-3xl">
-            <a
-              href="https://your-partner-url.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between gap-4 rounded-2xl
-                         border border-osr-orange/25 bg-osr-orange/10 px-6 py-5
-                         transition-all duration-300
-                         hover:bg-osr-orange/20 hover:border-osr-orange/50"
-            >
-              <div className="flex items-center gap-4">
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-osr-orange/20 text-osr-orange transition-colors group-hover:bg-osr-orange group-hover:text-white">
-                  <Bike className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <div>
-                  <p className="font-display text-base font-semibold text-white">
-                    {t("partnerTitle")}
-                  </p>
-                  <p className="mt-0.5 text-sm text-white/60">
-                    {t("partnerSubtitle")}
-                  </p>
-                </div>
-              </div>
-              <ArrowUpRight
-                className="h-5 w-5 shrink-0 text-osr-orange opacity-70
-                           transition-all duration-300
-                           group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                aria-hidden="true"
-              />
-            </a>
+            <DeliveryPartnerModal />
           </Reveal>
 
         </div>

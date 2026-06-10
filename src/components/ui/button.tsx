@@ -16,9 +16,9 @@ const buttonVariants = cva(
         ghost: "text-osr-ink hover:bg-osr-ink/5",
       },
       size: {
-        sm: "h-9 px-4",
-        md: "h-11 px-6",
-        lg: "h-13 px-8 text-base",
+        sm: "h-10 px-5",
+        md: "h-12 px-7",
+        lg: "h-14 px-9 text-base",
       },
     },
     defaultVariants: { variant: "primary", size: "md" },

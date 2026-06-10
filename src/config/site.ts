@@ -6,16 +6,17 @@ export const siteConfig = {
   name: "OSR",
   legalName: "OSR Technologies",
   // Replace with the production domain before deploy.
-  url: "https://osr.example",
+  url: "https://osr.sa",
   defaultLocale: "ar" as const,
   locales: ["ar", "en"] as const,
   twitter: "@osr",
-  email: "hello@osr.example",
-  phone: "+966500000000",
+  email: "support@osr.sa",
+  phone: "+966172211310",
   social: {
-    twitter: "https://twitter.com/osr",
-    instagram: "https://instagram.com/osr",
-    linkedin: "https://linkedin.com/company/osr",
+    instagram: "https://www.instagram.com/osr.ksa/",
+    tiktok: "https://www.tiktok.com/@osr.ksa",
+    snapchat: "https://www.snapchat.com/@osr.ksa",
+    whatsapp: "https://wa.me/966172211310",
   },
   // Used by Organization schema + Open Graph.
   ogImage: "/og.png",
