@@ -1,7 +1,5 @@
-import { Resend } from "resend";
 import { NextResponse } from "next/server";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { transporter, MAIL_FROM, MAIL_TO } from "@/lib/mailer";
 
 const INTEREST_LABELS: Record<string, string> = {
   customer: "عميل يبحث عن منتجات",
@@ -25,9 +23,9 @@ export async function POST(request: Request) {
 
     const interestLabel = INTEREST_LABELS[interest] ?? interest;
 
-    await resend.emails.send({
-      from: "OSR Website <onboarding@resend.dev>",
-      to: "mahmoud.hamed.shenawy@gmail.com", // TODO: change to support@osr.sa after domain verification
+    await transporter.sendMail({
+      from: MAIL_FROM,
+      to: MAIL_TO,
       replyTo: email,
       subject: `[OSR] استفسار جديد — ${interestLabel}`,
       html: `

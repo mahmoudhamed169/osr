@@ -1,13 +1,11 @@
-import { Resend } from "resend";
 import { NextResponse } from "next/server";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { transporter, MAIL_FROM, MAIL_TO } from "@/lib/mailer";
 
 const FLEET_LABELS: Record<string, string> = {
-  "1-5":    "1 – 5 مناديب",
-  "6-20":   "6 – 20 منديب",
-  "21-50":  "21 – 50 منديب",
-  "50+":    "أكثر من 50 منديب",
+  "1-5":   "1 – 5 مناديب",
+  "6-20":  "6 – 20 منديب",
+  "21-50": "21 – 50 منديب",
+  "50+":   "أكثر من 50 منديب",
 };
 
 export async function POST(request: Request) {
@@ -29,9 +27,9 @@ export async function POST(request: Request) {
 
     const fleet = FLEET_LABELS[fleetSize ?? ""] ?? fleetSize ?? "—";
 
-    await resend.emails.send({
-      from: "OSR Website <onboarding@resend.dev>",
-      to:   "mahmoud.hamed.shenawy@gmail.com", // TODO: change to support@osr.sa after domain verification
+    await transporter.sendMail({
+      from: MAIL_FROM,
+      to: MAIL_TO,
       subject: `[OSR] شراكة توصيل — ${company}`,
       html: `
         <div dir="rtl" style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;background:#FFFBF3;border-radius:12px;overflow:hidden;border:1px solid #eee;">

@@ -1,7 +1,5 @@
-import { Resend } from "resend";
 import { NextResponse } from "next/server";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { transporter, MAIL_FROM, MAIL_TO } from "@/lib/mailer";
 
 const ACTIVITY_LABELS: Record<string, string> = {
   food:     "ماكولات وحلويات",
@@ -34,11 +32,11 @@ export async function POST(request: Request) {
     const activity = activityTypes?.length
       ? activityTypes.map((a) => ACTIVITY_LABELS[a] ?? a).join(" ، ")
       : "—";
-    const timing   = TIME_LABELS[preferredTime ?? ""] ?? preferredTime ?? "—";
+    const timing = TIME_LABELS[preferredTime ?? ""] ?? preferredTime ?? "—";
 
-    await resend.emails.send({
-      from: "OSR Website <onboarding@resend.dev>",
-      to:   "mahmoud.hamed.shenawy@gmail.com", // TODO: change to support@osr.sa after domain verification
+    await transporter.sendMail({
+      from: MAIL_FROM,
+      to: MAIL_TO,
       subject: `[OSR] طلب استشارة مجانية — ${name}`,
       html: `
         <div dir="rtl" style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;background:#FFFBF3;border-radius:12px;overflow:hidden;border:1px solid #eee;">
